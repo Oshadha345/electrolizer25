@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+body {
+    font-family: "Courier New", monospace;
+    background-color: black;
+    color: #ff00c8; /* Squid Game Red */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image: url('im2.jpeg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
+  header {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  #subtitle{
+    text-align: center;
+  }
+  
+  /* Title Animation */
+  #title {
+    color: #981549; /* Squid Game Red */
+    font-size: 1.5rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-shadow: 0 0 10px #77215c;
+    margin: 0;
+    transform: scale(1);
+    animation: growTitle 3s ease-in-out infinite;
+  }
+  
+  @keyframes growTitle {
+    0%, 100% {
+      transform: scale(1);
+      text-shadow: 0 0 10px #77215c;
+    }
+    50% {
+      transform: scale(1.2);
+      text-shadow: 0 0 20px #77215c, 0 0 30px #77215c;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #title {
+      font-size: 0.3rem !important; /* Enforce smaller size */
+      line-height: 1.1 !important;
+      transform: scale(1) !important; /* Reset base scale */
+      text-shadow: 0 0 5px #77215c !important;
+      animation: bounceGlow 2s infinite alternate ease-in-out;
+      
+      .footer-logo-text {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .footer-logo img {
+        width: 100px;
+      }
+
+      .footer-text {
+        font-size: 20px;
+      }
+
+      .footer-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .footer-icons li {
+        margin: 0;
+      }/* Bounce and glow */
+    }
+  
+    @keyframes bounceGlow {
+      0% {
+        transform: translateY(0) scale(1);
+        text-shadow: 0 0 5px #56184e;
+      }
+      50% {
+        transform: translateY(-10px) scale(1.05); /* Slight upward bounce */
+        text-shadow: 0 0 10px #56184e, 0 0 20px #56184e;
+      }
+      100% {
+        transform: translateY(0) scale(1);
+        text-shadow: 0 0 5px #56184e;
+      }
+    }
+    
+  }
+
+
+  /* Terminal Styling for Squid Game */
+  #terminal, #terminal1 {
+    
+    
+    background-color: rgba(32, 19, 30, 0.9);
+    border: 3px solid #280b27;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Added for spacing */
+    color: #ffffff;
+    font-family: "Courier New", monospace;
+    font-size: larger;
+    transition: box-shadow 0.3s ease;
+}
+
+  
+  #terminal:hover, #terminal1:hover {
+    box-shadow: 0 0 15px #85187e;
+  }
+  
+  /* Hint button */
+  #hint-button-terminal {
+    
+    background-color: transparent;
+   
+    border: none;
+    color: #be2ccc;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #hint-button-terminal:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+  }
+  
+  .parent-container {
+    display: block;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+
+
+
+
+
+
+
+
+#output1,#output{
+    /* color: #9d3341; */
+    color: #c3acc2; /* Squid Game pink */
+    font-family: 'Press Start 2P', cursive; /* Pixelated game-style font */
+    font-size: 14px;
+    text-transform: uppercase; /* Make it all caps for impact */
+    letter-spacing: 2px; /* Spaced-out letters for a digital feel */
+    white-space: pre-wrap; /* Keeps formatting */
+    word-wrap: break-word;
+    text-align: center; /* Centering text */
+    line-height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Mobile Responsive Adjustments */
+  @media (max-width: 768px) {
+    .parent-container {  /* Added the missing dot */
+      display: flex;      /* Ensure flexbox is applied */
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;    /* Center items horizontally */
+      gap: 10px;              /* Add space between terminals */
+    }
+  
+    #terminal1,
+    #terminal {
+      width: 95%;             /* Make both terminals take almost full width */
+      margin: 0;              /* Remove default margins */
+    }
+  
+    #terminal1 {
+      margin-top: 10px;        /* Slight spacing at the top */
+    }
+  
+    #terminal {
+      margin-bottom: 10px;     /* Add bottom margin for spacing */
+    }
+  
+    
+  }
+  
+.centered-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    margin-top: 10px;
+    gap: 20px;
+  }
+
+
+
+  #instruction-bubble {
+    width: 200px; /* Wider width for better readability */
+    max-width: 100%; /* Limit the width to fit smaller screens */
+    background-color: rgba(0, 0, 0, 0.9);
+    color:rgba(32, 19, 30, 0.9);
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    word-wrap: break-word;
+    box-shadow: 0 0 10px #d623ca;
+  }
+
+
+  #input-container1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  #user-input1 {
+    background-color: black;
+    color:  #b52e71;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    margin-left: 5px;
+    outline: none;
+    display: none;
+  }
+  #user-input1:focus {
+    border: none;
+    outline: none;
+  }
+  #output1 {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+  }
+
+  #output{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+  }
+
+  #input-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+
+  #user-input {
+    background-color: black;
+    color:  #b52e71;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    margin-left: 5px;
+    outline: none;
+  }
+  
+  #user-input:focus {
+    border: none;
+    outline: none;
+  }
+
+
+
+  
+
+  #subtitle {
+      font-family: 'Rajdhani', sans-serif; /* Bold, futuristic font */
+      font-size: 32px;
+      color: #b52e71; /* Squid Game neon pink */
+      text-transform: uppercase; /* Makes text strong and impactful */
+      letter-spacing: 4px; /* Slightly spaced letters for a digital effect */
+      text-align: center; /* Centers the heading */
+      
+      /* Flickering Animation */
+  }
+  
+  /* Keyframes for Flickering Effect */
+  
+  

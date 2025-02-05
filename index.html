@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!--Custom StyleSheet-->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Welcome PERACOM22</title>
+  </head>
+  <body>
+    <!-------------------header------------------->
+    <header class="header" id="header">
+      <div class="nav-bar ">
+        <nav class="row container">
+          <a href="#header" class="logo">
+            <img style="width: 150px;" src="img/peracom_white.png" alt="website-logo" />
+          </a>
+
+          <ul class="navigation">
+            <li><a href="#header"></a></li>
+            <li><a href="#footer"></a></li>
+            <!-- <div class="close"></div> -->
+          </ul>
+          <a href="#header" class="logo">
+            <img style="width: 100px;" src="img/aces_logo.png" alt="website-logo" />
+          </a>
+          <!-- <div class="hamburger"></div> -->
+          
+        </nav>
+      </div>
+
+      <div class="hero-area">
+        <div class="hero-text">
+          <img class="img-one" src="img/bg-logo.png" alt="bg-logo" />
+          <h1>
+            Would you like to make a <br />
+            change in your life?
+          </h1>
+          <!-- <a class="button watch-button">Watch Now</a> -->
+        </div>
+        <div class="hero-img">
+          <!-- <img -->
+            <!-- class="img-four" -->
+            <!-- src="img/shapes-svg/bg-shape.svg" -->
+            <!-- alt="round-shape" -->
+          <!-- /> -->
+          <!-- <img class="img-two" src="img/bg-one.png" alt="round-shape" /> -->
+          <!-- <img class="img-three" src="img/bg-two.png" alt="round-shape" /> -->
+        </div>
+      </div>
+
+      <div class="video-wrapper">
+        <video class="video">
+          <source src="./video/squid_game.mp4" type="video/mp4" />
+          <source src="./video/Squid Game.webm" type="video/webm" />
+        </video>
+        <div class="close-video">
+          <i class="bx bx-x"></i>
+        </div>
+        <span class="video-control"><i class="bx bx-play"></i></span>
+      </div>
+    </header>
+    <section class="contact-area">
+      <div class="row container">
+        <div class="contact-box">
+          <h2>Every Player has a Number.What's Yours?</h2>
+          <h2>Enter Your Reg Number to Find out!</h2>
+          <input type="email" id="eNumberInput" placeholder="REG Number(E/22/XXX)" />
+          <p id="errorMessage" style="color: red; font-weight: bold; display: none;">Invalid E Number</p>
+          <a class="button" href="#">Enter</a>
+          <div class="contact-shape">
+            <img
+              class="cShape-one"
+              src="img/shapes-svg/contect-sape.svg"
+              alt="round-shape"
+            />
+            <img
+              class="cShape-two"
+              src="img/shapes-svg/contect-shape-1.svg"
+              alt="round-shape"
+            />
+            <img
+              class="cShape-three"
+              src="img/shapes-svg/contect-shape-2.svg"
+              alt="round-shape"
+            />
+            <img
+              class="cShape-four"
+              src="img/shapes-svg/contect-vector.svg"
+              alt="square-shape"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------footer area------------------->
+
+    <footer id="footer">
+      <div class="footer-area">
+        <div class="main-footer container">
+          <div class="footer-logo-text" style="display: flex; width: 100%; align-items: center; justify-content: center; gap: 50px;">
+            <div class="footer-logo">
+              <img id="footer-logo-aces" style="width: 300px;" src="img/aces_white.png" alt="website-logo" />
+            </div>
+            <div class="footer-text" style="width: 100%; color: white; font-size: 30px; text-align: center;">
+              Department of Computer Engineering<br> University of Peradeniya
+            </div>
+            <ul class="footer-icons">
+              <li>
+                <a href="https://www.facebook.com/acespera/">
+                  <i class="bx bxl-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://lk.linkedin.com/company/aces-association-of-computer-engineering-students">
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+    
+         
+        </div>
+      </div>
+    
+      <div class="copy-right">
+        <div class="container">
+          <p>&#169; Developed by PERA COM 2021 BATCH</p>
+        </div>
+      </div>
+    
+      <style>
+        @media (max-width: 768px) {
+          .footer-logo-text {
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+          }
+    
+          .footer-logo img {
+            width: 50px;
+          }
+          #footer-logo-aces {
+            width: 50px;
+          }
+    
+          .footer-text {
+            font-size: 20px;
+          }
+    
+          .footer-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 0;
+            list-style: none;
+          }
+    
+          .footer-icons li {
+            margin: 0;
+          }
+        }
+      </style>
+    </footer>
+    
+
+    <!-- Swiper JS -->
+  
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+
+
+    <!-- l added this -->
+    <script src="login.js"></script>
+    <script src="problem.js"></script>
+  </body>
+</html>
