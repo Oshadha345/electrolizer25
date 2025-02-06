@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autobot Cryptogram</title>
+    <style>
+        @font-face {
+            font-family: 'AutobotFont';
+            src: url("C:\Users\HUAWEI\Desktop\welcome\crypto\AncientAutobot-3RZX.ttf") format('truetype'); /* Ensure this path is correct */
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: #00ffcc;
+            padding: 20px;
+        }
+        #output {
+            font-size: 24px;
+            margin-top: 20px;
+            white-space: pre-wrap;
+            font-family: 'AutobotFont', sans-serif;
+        }
+        .autobot-symbol {
+            font-family: 'AutobotFont', sans-serif;
+            font-size: 30px;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Autobot Cryptogram Generator</h1>
+    <input type="text" id="regNum" placeholder="Enter Registration Number" oninput="generateCryptogram()">
+    <div id="output"></div>
+
+    <script>
+        const caesarShift = (text, shift) => {
+            return text.split('').map(char => {
+                if (char.match(/[a-z]/i)) {
+                    let code = char.charCodeAt(0);
+                    let base = code >= 65 && code <= 90 ? 65 : 97;
+                    return String.fromCharCode(((code - base + shift) % 26) + base);
+                }
+                return char;
+            }).join('');
+        };
+
+        const autobotAlphabet = {
+            'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D', 'E': 'E',
+            'F': 'F', 'G': 'G', 'H': 'H', 'I': 'I', 'J': 'J',
+            'K': 'K', 'L': 'L', 'M': 'M', 'N': 'N', 'O': 'O',
+            'P': 'P', 'Q': 'Q', 'R': 'R', 'S': 'S', 'T': 'T',
+            'U': 'U', 'V': 'V', 'W': 'W', 'X': 'X', 'Y': 'Y',
+            'Z': 'Z', ' ': ' '
+        };
+
+        const playerInfo = [
+            { regNum: "345", groupName: "Knock Out" },
+            { regNum: "347", groupName: "Optimus Prime" }
+        ];
+
+        function generateCryptogram() {
+            const regNum = document.getElementById('regNum').value;
+            if (!/^[0-9]+$/.test(regNum)) {
+                document.getElementById('output').innerHTML = "Please enter a valid registration number.";
+                return;
+            }
+
+            let player = playerInfo.find(player => player.regNum === regNum);
+            if (!player) {
+                document.getElementById('output').innerHTML = "Registration number not found.";
+                return;
+            }
+
+            let shift = regNum.split('').reduce((sum, digit) => sum + parseInt(digit), 0);
+            shift = shift % 9 + 1; // Ensuring shift is between 1 and 9
+
+            let cipheredName = caesarShift(player.groupName, shift);
+            let autobotMessage = cipheredName.split('').map(char => autobotAlphabet[char.toUpperCase()] || char).join(' ');
+
+            document.getElementById('output').innerHTML = `<span class="autobot-symbol">${autobotMessage}</span>`;
+        }
+    </script>
+</body>
+</html>
