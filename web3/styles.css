@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+
+
 body {
+  
+    font-family: 'MyCustomFont', "Courier New", monospace;
     font-family: "Courier New", monospace;
     background-color: black;
     color: #ff00c8; /* Squid Game Red */
@@ -12,8 +16,9 @@ body {
     justify-content: flex-start;
     min-height: 100vh;
     overflow-x: hidden;
-    background-image: url('im2.jpeg');
+    background-image: url('im6.jpg');
     background-size: 100% 100%;
+    background-color: rgb(220, 22, 22);
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -244,7 +249,7 @@ body {
     align-items: center;
     justify-content: flex-start;
   }
-  #user-input1 {
+  #regNum {
     background-color: black;
     color:  #b52e71;
     border: none;
@@ -255,7 +260,7 @@ body {
     outline: none;
     display: none;
   }
-  #user-input1:focus {
+  #regNum:focus {
     border: none;
     outline: none;
   }
@@ -278,7 +283,7 @@ body {
   }
 
 
-  #user-input {
+  #user-input, #group-name-input {
     background-color: black;
     color:  #b52e71;
     border: none;
@@ -310,5 +315,5 @@ body {
   }
   
   /* Keyframes for Flickering Effect */
-  
-  
+
+

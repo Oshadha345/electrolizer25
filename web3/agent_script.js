@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   const output = document.getElementById("output1");
-  const userInput = document.getElementById("user-input1");
   let typewriterQueue = Promise.resolve(); // Initialize a queue
 
   // Function to simulate the typewriter effect
@@ -28,31 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Function to set the terminal prompt format (translator@squidgame$:)
-  function setTerminalPrompt() {
-    const promptText = `translator@squidgame$: `;
-    userInput.placeholder = promptText;
-  }
-
   // The new introduction for the game (language translation theme)
   function askForPhrase() {
     const text =
-      "Welcome to the Transformer Game.\n\n" +
-      "In this game, you will be provided with phrases in transformer languages, and your task is to translate them into English.\n\n" +
-      "You must think a lot.\n" +
-      "Prepare yourself." +
-      "Let's begin the translation challenge. Are you ready?\n\n";
+      "Welcome to the Transformer Game.\n" +
+      "In this game, you will be provided a phrase in transformer language, and your task is to translate it into English." +
+      "Let's begin the translation challenge. Are you ready?\n\n"+
+      "Enter your Registration Number:\n"+
+      "(only last 3 digits)";
 
     printToTerminal(text);
   }
 
-  // New game phrase to translate (in a foreign language)
-  function showTranslationPrompt() {
-    const foreignPhrase = "Hola, ¿cómo estás?"; // A phrase in Spanish
-    const text = `Your first phrase to translate: \n\n"${foreignPhrase}"\n\nTranslate this to English: `;
-    printToTerminal(text);
-    setTerminalPrompt();
-  }
+
 
   // Trigger the translation game steps
   function startGame() {

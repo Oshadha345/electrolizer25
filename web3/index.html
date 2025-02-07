@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SquidX</title>
+    <title>Cryptogram</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="squidgame.ico" />
     <link rel="stylesheet" href="web3/front.css"/>
@@ -25,30 +25,44 @@
         
         <!-- doll tag -->
         <div class="centered-flex">
-          <img src="/img/images-3-removebg-preview (1).png" alt="Squid GAME gu" style="width: 100px; height: auto"/>
+          <h1>EQUALIZER</h1>
         </div>
 
 
         <pre id="output1"></pre>
         <div id="input-container1">
           <label for="user-input1"></label>
-          <input type="text" id="user-input1" autocomplete="off" autofocus disabled="true"/>
+          
+        
+        <div id="input-container">
+          <label for="user-input">▶ </label>
+          <input oninput="generateCryptogram()" type="text" id="user-input" autocomplete="off" autofocus /> 
+          
+        </div>
+        <pre id="generated-output"></pre> 
+          
+          
         </div>
       </div>
-      
+      <div id="terminal" class="term">
+        <div class="centered-flex">
+          <h2>DECRYPT IF YOU CAN!!!</h2>
+          <pre id="output"></pre>
+          <pre id="generated-output"></pre></div>
+        
+        
+      </div>     
 
       <div id="terminal" class="term">
           
         <pre id="output"></pre>
         <div id="input-container">
           <label for="user-input">▶ </label>
-          <input type="text" id="user-input" autocomplete="off" autofocus /> 
-          <button id="hint-button-terminal" title="Hint">
-            <i class="fa-solid fa-lightbulb"></i>
-          </button>
-
-        </div>
-
+          <input  type="text" id="group-name-input" autocomplete="off" autofocus /> 
+          
+          
+        </div><br>
+        <div id="group-name-check"></div>
 
         
       </div>
